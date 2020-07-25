@@ -30,7 +30,7 @@
         <repository>
             <id>maven_repo</id>
             <name>Maven Repo</name>
-            <url>http://central.maven.org/maven2/</url>
+            <url>https://central.maven.org/maven2/</url>
         </repository>
         <repository>
             <id>cloudera_repo</id>
@@ -40,7 +40,15 @@
     </repositories>
 
     <dependencies>
+        <!--JDBC-->
+        <dependency>
+            <groupId>org.apache.hive</groupId>
+            <artifactId>hive-jdbc</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+
         <!--Scala Dependency-->
+
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
@@ -58,6 +66,8 @@
             <artifactId>commons-cli</artifactId>
             <version>1.4</version>
         </dependency>
+
+
     </dependencies>
 
     <build>
@@ -105,7 +115,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.kishan.avroTest</mainClass>
+                            <mainClass>com.kishan.apacheParser.apacheParserWithHelp</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
